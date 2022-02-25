@@ -1,0 +1,13 @@
+.venv
+.vscode
+.mypy_cache
+.DS_Store
+__pycache__
+.ipynb_checkpoints
+logs/*
+!logs/foo.txt
+outputs/*
+!outputs/foo.txt
+schema/*
+!schema/example_schema.pbtxt
+ds_data.py

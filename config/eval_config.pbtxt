@@ -1,0 +1,75 @@
+## Model information
+model_specs {
+  # This assumes a serving model with signature 'serving_default'.
+  signature_name: "serving_default"
+  label_key: "default_xf"
+  preprocessing_function_names: ["transform_features"]
+}
+
+## Post training metric information
+metrics_specs {
+  metrics { class_name: "ExampleCount" }
+  metrics {
+    class_name: "BinaryAccuracy"
+    threshold {
+      # Ensure that metric is always > 0.6
+      value_threshold {
+        lower_bound { value: 0.9 }
+      }
+      # Ensure that metric does not drop by more than a small epsilon
+      # e.g. (candidate - baseline) > -1e-10 or candidate > baseline - 1e-10
+      change_threshold {
+        direction: HIGHER_IS_BETTER
+        absolute { value: -1e-10 }
+      }
+    }
+  }
+  metrics { class_name: "BinaryCrossentropy" }
+  metrics { class_name: "AUC" }
+  metrics { class_name: "AUCPrecisionRecall" }
+  metrics { class_name: "Precision" }
+  metrics { class_name: "Recall" }
+  metrics { class_name: "MeanLabel" }
+  metrics { class_name: "MeanPrediction" }
+  metrics { class_name: "Calibration" }
+  metrics { class_name: "CalibrationPlot" }
+  metrics { class_name: "ConfusionMatrixPlot" }
+  # ... add additional metrics and plots ...
+
+  # # Fairness indicators
+  # metrics {
+  #   class_name: "FairnessIndicators"
+  #   config: '{ "thresholds": [0.22, 0.5, 0.75] }'
+  # }
+}
+
+## Slicing information
+# Overall slice
+slicing_specs {}
+
+# Slice specific features
+slicing_specs {
+  feature_keys: ["age"]
+}
+slicing_specs {
+  feature_keys: ["worst_status_active_inv"]
+}
+slicing_specs {
+  feature_keys: ["has_paid"]
+}
+slicing_specs {
+  feature_keys: ["merchant_group"]
+}
+
+# Slice specific values from features
+slicing_specs {
+  feature_values: {
+    key: "has_paid"
+    value: "0"
+  }
+}
+
+# Slice feature crosses
+slicing_specs {
+  feature_keys: ["has_paid", "merchant_group"]
+}

@@ -1,0 +1,13 @@
+flake8>=3.7.9, <4.0
+tfx==1.5.0
+tensorflow-serving-api<=2.7.0
+tensorflow-probability~=0.15.0
+# tensorflow-decision-forests>=0.2.3
+witwidget~=1.8.0
+ipython==7.31.0
+jupyter==1.0.0
+jupyterlab==3.2.9
+scikit-learn~=1.0
+matplotlib
+seaborn
+# xgboost~=1.4

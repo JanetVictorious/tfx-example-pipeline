@@ -1,0 +1,581 @@
+feature {
+  name: "account_amount_added_12_24m"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "account_days_in_dc_12_24m"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "account_days_in_rem_12_24m"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "account_days_in_term_12_24m"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "account_incoming_debt_vs_paid_0_24m"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "account_status"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "account_worst_status_0_3m"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "account_worst_status_12_24m"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "account_worst_status_3_6m"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "account_worst_status_6_12m"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "age"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "avg_payment_span_0_12m"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "avg_payment_span_0_3m"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "default"
+  type: INT
+  bool_domain {
+  }
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "has_paid"
+  type: BYTES
+  bool_domain {
+    true_value: "TRUE"
+    false_value: "FALSE"
+  }
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "max_paid_inv_0_12m"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "max_paid_inv_0_24m"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "merchant_category"
+  type: BYTES
+  domain: "merchant_category"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "merchant_group"
+  type: BYTES
+  domain: "merchant_group"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "name_in_email"
+  type: BYTES
+  domain: "name_in_email"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "num_active_div_by_paid_inv_0_12m"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "num_active_inv"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "num_arch_dc_0_12m"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "num_arch_dc_12_24m"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "num_arch_ok_0_12m"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "num_arch_ok_12_24m"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "num_arch_rem_0_12m"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "num_arch_written_off_0_12m"
+  type: INT
+  bool_domain {
+  }
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "num_arch_written_off_12_24m"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "num_unpaid_bills"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "recovery_debt"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "status_2nd_last_archived_0_24m"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "status_3rd_last_archived_0_24m"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "status_last_archived_0_24m"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "status_max_archived_0_12_months"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "status_max_archived_0_24_months"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "status_max_archived_0_6_months"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "sum_capital_paid_account_0_12m"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "sum_capital_paid_account_12_24m"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "sum_paid_inv_0_12m"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "time_hours"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "uuid"
+  type: BYTES
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "worst_status_active_inv"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+string_domain {
+  name: "merchant_category"
+  value: "Adult Shoes & Clothing"
+  value: "Automotive Parts & Accessories"
+  value: "Bags & Wallets"
+  value: "Body & Hair Care"
+  value: "Books & Magazines"
+  value: "Car electronics"
+  value: "Children Clothes & Nurturing products"
+  value: "Children toys"
+  value: "Cleaning & Sanitary"
+  value: "Collectibles"
+  value: "Concept stores & Miscellaneous"
+  value: "Cosmetics"
+  value: "Costumes & Party supplies"
+  value: "Dating services"
+  value: "Decoration & Art"
+  value: "Dietary supplements"
+  value: "Digital services"
+  value: "Diversified Health & Beauty products"
+  value: "Diversified Home & Garden products"
+  value: "Diversified Jewelry & Accessories"
+  value: "Diversified children products"
+  value: "Diversified electronics"
+  value: "Diversified entertainment"
+  value: "Diversified erotic material"
+  value: "Education"
+  value: "Electronic equipment & Related accessories"
+  value: "Erotic Clothing & Accessories"
+  value: "Event tickets"
+  value: "Food & Beverage"
+  value: "Fragrances"
+  value: "Furniture"
+  value: "General Shoes & Clothing"
+  value: "Hobby articles"
+  value: "Household electronics (whitegoods/appliances)"
+  value: "Jewelry & Watches"
+  value: "Kitchenware"
+  value: "Music & Movies"
+  value: "Musical Instruments & Equipment"
+  value: "Non"
+  value: "Office machines & Related accessories (excl. computers)"
+  value: "Personal care & Body improvement"
+  value: "Pet supplies"
+  value: "Pharmaceutical products"
+  value: "Plants & Flowers"
+  value: "Prescription optics"
+  value: "Prints & Photos"
+  value: "Safety products"
+  value: "Sex toys"
+  value: "Sports gear & Outdoor"
+  value: "Tobacco"
+  value: "Tools & Home improvement"
+  value: "Travel services"
+  value: "Underwear"
+  value: "Video Games & Related accessories"
+  value: "Wheels & Tires"
+  value: "Wine, Beer & Liquor"
+  value: "Youthful Shoes & Clothing"
+}
+string_domain {
+  name: "merchant_group"
+  value: "Automotive Products"
+  value: "Children Products"
+  value: "Clothing & Shoes"
+  value: "Electronics"
+  value: "Entertainment"
+  value: "Erotic Materials"
+  value: "Food & Beverage"
+  value: "Health & Beauty"
+  value: "Home & Garden"
+  value: "Intangible products"
+  value: "Jewelry & Accessories"
+  value: "Leisure, Sport & Hobby"
+}
+string_domain {
+  name: "name_in_email"
+  value: "F"
+  value: "F+L"
+  value: "F1+L"
+  value: "Initials"
+  value: "L"
+  value: "L1+F"
+  value: "Nick"
+  value: "no_match"
+}
