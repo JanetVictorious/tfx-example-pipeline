@@ -119,3 +119,9 @@ When you want to run the pipeline using the `local_runner.py` script, simply run
 ```shell
 $ python src/local_runner.py
 ```
+
+---
+
+## Run on docker
+
+Some text here...
